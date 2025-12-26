@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Baisse Factures Maison</title>
+    <style>
+        :root {
+            --bleu: #0077c8;
+            --texte-principal: #1f2933;
+            --texte-secondaire: #4b5563;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: #ffffff;
+            color: var(--texte-principal);
+        }
+
+        header {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 10px 16px;
+        }
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--bleu);
+        }
+
+        main {
+            padding: 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin: 0 0 8px 0;
+            font-weight: 600;
+            color: var(--bleu);
+        }
+
+        .intro {
+            font-size: 1rem;
+            line-height: 1.55;
+            margin-bottom: 18px;
+            color: var(--texte-secondaire);
+        }
+
+        .leviers-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin: 0 0 10px 0;
+            color: var(--bleu);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0 0 18px 0;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 0.98rem;
+        }
+        li a {
+            color: var(--texte-principal);
+            text-decoration: none;
+        }
+        li a span {
+            display: block;
+        }
+        li a strong {
+            color: var(--bleu);
+            font-weight: 600;
+        }
+        li a:hover {
+            text-decoration: underline;
+        }
+
+        .cta {
+            font-size: 0.96rem;
+            margin-top: 10px;
+            color: var(--texte-principal);
+        }
+        .cta span {
+            color: var(--bleu);
+        }
+
+        .note {
+            margin-top: 14px;
+            font-size: 0.85rem;
+            color: var(--texte-secondaire);
+            border-left: 3px solid #e5e7eb;
+            padding-left: 10px;
+        }
+
+        .contact {
+            margin-top: 18px;
+            padding-top: 12px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.94rem;
+            color: var(--texte-secondaire);
+        }
+        .contact-title {
+            font-weight: 600;
+            color: var(--bleu);
+            margin-bottom: 4px;
+        }
+        .contact-line {
+            margin: 2px 0;
+        }
+        .contact a {
+            color: var(--bleu);
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            padding: 12px 16px 16px 16px;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            text-align: center;
+            border-top: 1px solid #f3f4f6;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                padding: 24px 16px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">Baisse Factures Maison</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Baisser vos factures d’énergie</h1>
+
+            <p class="intro">
+                Et si votre maison consommait moins… sans changer votre façon de vivre ?<br>
+                Découvrez les 4 travaux et les aides les plus souvent cités pour alléger la facture d’énergie d’une maison comme la vôtre.
+            </p>
+
+            <p class="leviers-title">Les 4 leviers possibles</p>
+            <ul>
+                <li>
+                    <a href="combles.html">
+                        <strong>Isolation des combles</strong>
+                        <span>Environ 20 à 30&nbsp;% d’économies sur le chauffage*</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pac.html">
+                        <strong>Pompe à chaleur air/eau</strong>
+                        <span>Environ 30 à 50&nbsp;% d’économies sur la partie chauffage*</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pv.html">
+                        <strong>Panneaux solaires</strong>
+                        <span>Plusieurs centaines d’euros d’économies d’électricité par an possibles*</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ballon.html">
+                        <strong>Ballon d’eau chaude thermodynamique</strong>
+                        <span>Environ 50 à 70&nbsp;% d’économies sur l’eau chaude*</span>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="cta">
+                <span>👉</span> Cliquez sur la solution qui vous intéresse pour voir ce que cela peut changer sur votre facture.
+            </p>
+
+            <p class="note">
+                *Chiffres et ordres de grandeur indicatifs, à adapter à chaque maison (état du logement, chauffage actuel, consommation, région, revenus, type de travaux). 
+                Un échange avec un éco‑conseiller et l’usage des simulateurs officiels d’aides permettent d’affiner ce qui est possible chez vous.
+            </p>
+
+            <div class="contact">
+                <div class="contact-title">Étude gratuite de votre situation</div>
+                <p class="contact-line">
+                    Pour une étude gratuite de votre maison et de vos factures, vous pouvez me contacter directement&nbsp;:
+                </p>
+                <p class="contact-line">
+                    Email&nbsp;:
+                    <strong><a href="mailto:samduboseas@gmail.com">samduboseas@gmail.com</a></strong>
+                </p>
+                <p class="contact-line">
+                    Téléphone&nbsp;:
+                    <strong><a href="tel:+33771443175">07&nbsp;71&nbsp;44&nbsp;31&nbsp;75</a></strong>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © Baisse Factures Maison – Informations et conseils sur la rénovation énergétique.
+    </footer>
+</body>
+</html>
