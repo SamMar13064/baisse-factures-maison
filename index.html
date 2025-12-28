@@ -1,226 +1,275 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Baisse Factures Maison</title>
-    <style>
-        :root {
-            --bleu: #0077c8;
-            --texte-principal: #1f2933;
-            --texte-secondaire: #4b5563;
-        }
+  <meta charset="UTF-8">
+  <title>Baisse Factures Maison</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background-color: #ffffff;
-            color: var(--texte-principal);
-        }
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 1.5rem;
+      line-height: 1.5;
+      color: #1b2631;
+      background-color: #f2f5f7;
+    }
 
-        header {
-            border-bottom: 1px solid #e5e7eb;
-            padding: 10px 16px;
-        }
-        .header-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--bleu);
-        }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
 
-        main {
-            padding: 16px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+    h1 {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #123456;
+    }
 
-        h1 {
-            font-size: 1.6rem;
-            margin: 0 0 8px 0;
-            font-weight: 600;
-            color: var(--bleu);
-        }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #145a86;
+    }
 
-        .intro {
-            font-size: 1rem;
-            line-height: 1.55;
-            margin-bottom: 18px;
-            color: var(--texte-secondaire);
-        }
+    p {
+      margin: 0.5rem 0;
+    }
 
-        .leviers-title {
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            margin: 0 0 10px 0;
-            color: var(--bleu);
-        }
+    .intro {
+      margin-bottom: 1rem;
+      color: #415a6b;
+    }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 0 0 18px 0;
-        }
-        li {
-            margin-bottom: 10px;
-            font-size: 0.98rem;
-        }
-        li a {
-            color: var(--texte-principal);
-            text-decoration: none;
-        }
-        li a span {
-            display: block;
-        }
-        li a strong {
-            color: var(--bleu);
-            font-weight: 600;
-        }
-        li a:hover {
-            text-decoration: underline;
-        }
+    .hero-produits {
+      text-align: center;
+      margin: 1.5rem 0 1rem 0;
+    }
 
-        .cta {
-            font-size: 0.96rem;
-            margin-top: 10px;
-            color: var(--texte-principal);
-        }
-        .cta span {
-            color: var(--bleu);
-        }
+    .hero-produits h2 {
+      font-size: 1.4rem;
+      color: #145a86;
+    }
 
-        .note {
-            margin-top: 14px;
-            font-size: 0.85rem;
-            color: var(--texte-secondaire);
-            border-left: 3px solid #e5e7eb;
-            padding-left: 10px;
-        }
+    .hero-produits p {
+      color: #415a6b;
+    }
 
-        .contact {
-            margin-top: 18px;
-            padding-top: 12px;
-            border-top: 1px solid #e5e7eb;
-            font-size: 0.94rem;
-            color: var(--texte-secondaire);
-        }
-        .contact-title {
-            font-weight: 600;
-            color: var(--bleu);
-            margin-bottom: 4px;
-        }
-        .contact-line {
-            margin: 2px 0;
-        }
-        .contact a {
-            color: var(--bleu);
-            text-decoration: none;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
+    .grille-produits {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
 
-        footer {
-            padding: 12px 16px 16px 16px;
-            font-size: 0.8rem;
-            color: #9ca3af;
-            text-align: center;
-            border-top: 1px solid #f3f4f6;
-            margin-top: 20px;
-        }
+    @media (min-width: 800px) {
+      .grille-produits {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
 
-        @media (min-width: 768px) {
-            main {
-                padding: 24px 16px;
-            }
-            h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    .carte-produit {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      background-color: #f6f8fa;
+      color: #102027;
+    }
+
+    .carte-image-haut {
+      width: 100%;
+      max-height: 220px;
+      overflow: hidden;
+    }
+
+    .carte-image-haut img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .carte-contenu {
+      padding: 1rem 1.1rem;
+    }
+
+    .carte-produit h3 {
+      margin: 0.3rem 0;
+      color: #145a86;
+    }
+
+    .carte-produit .sous-titre {
+      margin: 0.1rem 0 0.6rem 0;
+      font-weight: 600;
+      color: #1b7f5b;
+    }
+
+    .bouton-lien {
+      display: inline-block;
+      margin-top: 0.4rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      background: #1b7f5b;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .bouton-lien:hover {
+      background: #156a48;
+    }
+
+    .cta {
+      font-weight: 600;
+      margin-top: 0.75rem;
+      color: #145a86;
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #455a64;
+    }
+
+    footer p {
+      margin: 0.4rem 0;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-inner">
-            <div class="logo">Baisse Factures Maison</div>
+
+  <main>
+    <h1>Baisser vos factures d’énergie</h1>
+    <p class="intro">
+      Et si votre maison consommait moins… sans changer votre façon de vivre ?
+      Ce site vous présente, en toute simplicité, 4 types de travaux et d’aides
+      qui reviennent le plus souvent pour alléger la facture d’énergie d’une maison comme la vôtre.
+    </p>
+
+    <section class="hero-produits">
+      <h2>4 idées pour alléger vos factures</h2>
+      <p>
+        Des travaux concrets, pensés pour des maisons habitées tous les jours,
+        avec un accompagnement étape par étape pour rester serein du premier contact jusqu’à la fin du chantier.
+      </p>
+    </section>
+
+    <section class="grille-produits">
+
+      <article class="carte-produit carte-combles">
+        <div class="carte-contenu">
+          <h3>Isolation des combles</h3>
+          <p class="sous-titre">Soulager le chauffage de la maison.</p>
+          <p>
+            Une couche continue d’isolant (laine de roche ou équivalent) dans vos combles limite les
+            déperditions et rend la maison plus agréable, sans courant d’air froid.
+          </p>
+          <p>
+            <a href="combles.html" class="bouton-lien">
+              Voir comment on isole vos combles
+            </a>
+          </p>
         </div>
-    </header>
+      </article>
 
-    <main>
-        <div class="container">
-            <h1>Baisser vos factures d’énergie</h1>
-
-            <p class="intro">
-                Et si votre maison consommait moins… sans changer votre façon de vivre ?<br>
-                Découvrez les 4 travaux et les aides les plus souvent cités pour alléger la facture d’énergie d’une maison comme la vôtre.
-            </p>
-
-            <p class="leviers-title">Les 4 leviers possibles</p>
-            <ul>
-                <li>
-                    <a href="combles.html">
-                        <strong>Isolation des combles</strong>
-                        <span>Environ 20 à 30&nbsp;% d’économies sur le chauffage*</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="pac.html">
-                        <strong>Pompe à chaleur air/eau</strong>
-                        <span>Environ 30 à 50&nbsp;% d’économies sur la partie chauffage*</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="pv.html">
-                        <strong>Panneaux solaires</strong>
-                        <span>Plusieurs centaines d’euros d’économies d’électricité par an possibles*</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="ballon.html">
-                        <strong>Ballon d’eau chaude thermodynamique</strong>
-                        <span>Environ 50 à 70&nbsp;% d’économies sur l’eau chaude*</span>
-                    </a>
-                </li>
-            </ul>
-
-            <p class="cta">
-                <span>👉</span> Cliquez sur la solution qui vous intéresse pour voir ce que cela peut changer sur votre facture.
-            </p>
-
-            <p class="note">
-                *Chiffres et ordres de grandeur indicatifs, à adapter à chaque maison (état du logement, chauffage actuel, consommation, région, revenus, type de travaux). 
-                Un échange avec un éco‑conseiller et l’usage des simulateurs officiels d’aides permettent d’affiner ce qui est possible chez vous.
-            </p>
-
-            <div class="contact">
-                <div class="contact-title">Étude gratuite de votre situation</div>
-                <p class="contact-line">
-                    Pour une étude gratuite de votre maison et de vos factures, vous pouvez me contacter directement&nbsp;:
-                </p>
-                <p class="contact-line">
-                    Email&nbsp;:
-                    <strong><a href="mailto:samduboseas@gmail.com">samduboseas@gmail.com</a></strong>
-                </p>
-                <p class="contact-line">
-                    Téléphone&nbsp;:
-                    <strong><a href="tel:+33771443175">07&nbsp;71&nbsp;44&nbsp;31&nbsp;75</a></strong>
-                </p>
-            </div>
+      <article class="carte-produit carte-pac">
+        <div class="carte-contenu">
+          <h3>Pompe à chaleur air/eau</h3>
+          <p class="sous-titre">Remplacer une chaudière qui inquiète.</p>
+          <p>
+            La pompe à chaleur prend le relais d’une chaudière gaz ou fioul et alimente vos radiateurs,
+            avec une chaleur plus douce et une consommation mieux maîtrisée.
+          </p>
+          <p>
+            <a href="pac.html" class="bouton-lien">
+              Découvrir la pompe à chaleur chez vous
+            </a>
+          </p>
         </div>
-    </main>
+      </article>
+
+      <article class="carte-produit carte-pv">
+        <div class="carte-contenu">
+          <h3>Panneaux solaires photovoltaïques</h3>
+          <p class="sous-titre">Profiter du soleil pour votre maison.</p>
+          <p>
+            Les panneaux photovoltaïques produisent une partie de votre électricité.
+            Vous gardez le même confort, avec une facture d’électricité plus légère sur la durée.
+          </p>
+          <p>
+            <a href="pv.html" class="bouton-lien">
+              Voir les projets solaires possibles
+            </a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Carte ballon avec ta photo en haut -->
+      <article class="carte-produit carte-ballon">
+        <div class="carte-image-haut">
+          <img src="ballon-thermodynamique.jpg" alt="Ballon d’eau chaude thermodynamique">
+        </div>
+        <div class="carte-contenu">
+          <h3>Ballon d’eau chaude thermodynamique</h3>
+          <p class="sous-titre">Alléger la partie “eau chaude”.</p>
+          <p>
+            Le ballon thermodynamique utilise les calories de l’air pour chauffer l’eau,
+            en consommant beaucoup moins qu’un cumulus classique.
+          </p>
+          <p>
+            <a href="ballon.html" class="bouton-lien">
+              Comprendre si ce ballon est adapté
+            </a>
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <p class="cta">
+      👉 Cliquez sur la solution qui vous parle le plus pour voir ce que cela peut changer, chez vous, sur vos factures.
+    </p>
+
+    <p>
+      *Chiffres et ordres de grandeur indicatifs, à adapter à chaque maison (état du logement, chauffage actuel, consommation, région, revenus, type de travaux).
+      Un échange avec un éco‑conseiller et l’usage des simulateurs officiels d’aides permettent d’affiner ce qui est possible chez vous.
+    </p>
+
+    <h2>Étude gratuite de votre situation</h2>
+    <p>
+      Pour une étude gratuite de votre maison et de vos factures, vous pouvez me contacter directement :
+    </p>
+    <p>
+      📧 Email : <a href="mailto:samduboseas@gmail.com">samduboseas@gmail.com</a><br>
+      📞 Téléphone : <a href="tel:+33771443175">07&nbsp;71&nbsp;44&nbsp;31&nbsp;75</a>
+    </p>
 
     <footer>
-        © Baisse Factures Maison – Informations et conseils sur la rénovation énergétique.
+      <p>
+        👉 Vous habitez dans les Bouches-du-Rhône ou à Pertuis (84) et vous voulez en parler ?
+        Contactez-moi pour voir ce qui est possible dans votre maison.
+      </p>
+      <p>
+        👉 En savoir ce que ces travaux ont donné chez d’autres particuliers :
+        <a href="https://www.eauairsol-avis.com/avis-clients/" target="_blank" rel="noopener">
+          ⭐ lire quelques avis clients contrôlés
+        </a>.
+      </p>
+      <p>
+        👉 Découvrir l’entreprise qui réalise les travaux :
+        <a href="https://www.eau-air-sol.fr" target="_blank" rel="noopener">
+          🌍 site officiel Eau Air Sol
+        </a>.
+      </p>
+
+      <p>© Baisse Factures Maison – Informations et conseils sur la rénovation énergétique.</p>
     </footer>
+  </main>
+
 </body>
 </html>
