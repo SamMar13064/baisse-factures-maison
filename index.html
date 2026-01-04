@@ -1,256 +1,339 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Baisse Factures Maison</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 1.5rem;
-      line-height: 1.5;
-      color: #1b2631;
-      background-color: #f2f5f7;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      color: #123456;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: #145a86;
-    }
-
-    p {
-      margin: 0.5rem 0;
-    }
-
-    .intro {
-      margin-bottom: 1rem;
-      color: #415a6b;
-    }
-
-    .hero-produits {
-      text-align: center;
-      margin: 1.5rem 0 1rem 0;
-    }
-
-    .hero-produits h2 {
-      font-size: 1.4rem;
-      color: #145a86;
-    }
-
-    .hero-produits p {
-      color: #415a6b;
-    }
-
-    .grille-produits {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    @media (min-width: 800px) {
-      .grille-produits {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .carte-produit {
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      background-color: #f6f8fa;
-      color: #102027;
-      padding: 1rem 1.1rem;
-    }
-
-    .carte-produit h3 {
-      margin: 0.3rem 0;
-      color: #145a86;
-    }
-
-    .carte-produit .sous-titre {
-      margin: 0.1rem 0 0.6rem 0;
-      font-weight: 600;
-      color: #1b7f5b;
-    }
-
-    .bouton-lien {
-      display: inline-block;
-      margin-top: 0.4rem;
-      padding: 0.5rem 0.9rem;
-      border-radius: 999px;
-      background: #1b7f5b;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .bouton-lien:hover {
-      background: #156a48;
-    }
-
-    .cta {
-      font-weight: 600;
-      margin-top: 0.75rem;
-      color: #145a86;
-    }
-
-    footer {
-      margin-top: 1.5rem;
-      font-size: 0.9rem;
-      color: #455a64;
-    }
-
-    footer p {
-      margin: 0.4rem 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baisse Factures Maison – Réduire sa facture d'énergie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .intro {
+            background: white;
+            padding: 40px;
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .intro p {
+            font-size: 1.05em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #1e3c72;
+            text-align: center;
+            margin: 40px 0 30px;
+            font-size: 2em;
+        }
+        
+        .ideas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .idea-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .idea-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        
+        .idea-card h3 {
+            color: #16a34a;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .idea-card .subtitle {
+            color: #16a34a;
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+        
+        .idea-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95em;
+        }
+        
+        .btn:hover {
+            background: #15803d;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #333;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta p {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .study-section {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .study-section h2 {
+            margin-top: 0;
+        }
+        
+        .contact-info {
+            margin: 20px 0;
+            font-size: 1.05em;
+        }
+        
+        .contact-info a {
+            color: #1e3c72;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .tip {
+            background: #fef3c7;
+            padding: 20px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        
+        /* Bouton WhatsApp */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 9999;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .ideas {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .whatsapp-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <main>
-    <h1>Baisser vos factures d'énergie</h1>
-    <p class="intro">
-      Et si votre maison consommait moins… sans changer votre façon de vivre ?
-      Ce site vous présente, en toute simplicité, 4 types de travaux et d'aides
-      qui reviennent le plus souvent pour alléger la facture d'énergie d'une maison comme la vôtre.
-    </p>
-
-    <section class="hero-produits">
-      <h2>4 idées pour alléger vos factures</h2>
-      <p>
-        Des travaux concrets, pensés pour des maisons habitées tous les jours,
-        avec un accompagnement étape par étape pour rester serein du premier contact jusqu'à la fin du chantier.
-      </p>
-    </section>
-
-    <section class="grille-produits">
-
-      <article class="carte-produit carte-combles">
-        <h3>Isolation des combles</h3>
-        <p class="sous-titre">Soulager le chauffage de la maison.</p>
-        <p>
-          Une couche continue d'isolant (laine de roche ou équivalent) dans vos combles limite les
-          déperditions et rend la maison plus agréable, sans courant d'air froid.
-        </p>
-        <p>
-          <a href="combles.html" class="bouton-lien">
-            Voir comment on isole vos combles
-          </a>
-        </p>
-      </article>
-
-      <article class="carte-produit carte-pac">
-        <h3>Pompe à chaleur air/eau</h3>
-        <p class="sous-titre">Remplacer une chaudière qui inquiète.</p>
-        <p>
-          La pompe à chaleur prend le relais d'une chaudière gaz ou fioul et alimente vos radiateurs,
-          avec une chaleur plus douce et une consommation mieux maîtrisée.
-        </p>
-        <p>
-          <a href="pac.html" class="bouton-lien">
-            Découvrir la pompe à chaleur chez vous
-          </a>
-        </p>
-      </article>
-
-      <article class="carte-produit carte-pv">
-        <h3>Panneaux solaires photovoltaïques</h3>
-        <p class="sous-titre">Profiter du soleil pour votre maison.</p>
-        <p>
-          Les panneaux photovoltaïques produisent une partie de votre électricité.
-          Vous gardez le même confort, avec une facture d'électricité plus légère sur la durée.
-        </p>
-        <p>
-          <a href="pv.html" class="bouton-lien">
-            Voir les projets solaires possibles
-          </a>
-        </p>
-      </article>
-
-      <article class="carte-produit carte-ballon">
-        <h3>Ballon d'eau chaude thermodynamique</h3>
-        <p class="sous-titre">Alléger la partie "eau chaude".</p>
-        <p>
-          Le ballon thermodynamique utilise les calories de l'air pour chauffer l'eau,
-          en consommant beaucoup moins qu'un cumulus classique.
-        </p>
-        <p>
-          <a href="ballon.html" class="bouton-lien">
-            Comprendre si ce ballon est adapté
-          </a>
-        </p>
-      </article>
-
-    </section>
-
-    <p class="cta">
-      👉 Cliquez sur la solution qui vous parle le plus pour voir ce que cela peut changer, chez vous, sur vos factures.
-    </p>
-
-    <p>
-      *Chiffres et ordres de grandeur indicatifs, à adapter à chaque maison (état du logement, chauffage actuel, consommation, région, revenus, type de travaux).
-      Un échange avec un éco‑conseiller et l'usage des simulateurs officiels d'aides permettent d'affiner ce qui est possible chez vous.
-    </p>
-
-    <h2>Étude gratuite de votre situation</h2>
-    <p>
-      Pour une étude gratuite de votre maison et de vos factures, vous pouvez me contacter directement :
-    </p>
-    <p>
-      📧 Email : <a href="mailto:samduboseas@gmail.com">samduboseas@gmail.com</a><br>
-      📞 Téléphone : <a href="tel:+33771443175">07&nbsp;71&nbsp;44&nbsp;31&nbsp;75</a>
-    </p>
-
+    <!-- En-tête -->
+    <header>
+        <div class="container">
+            <h1>Baisse Factures Maison</h1>
+            <p>Réduire votre facture d'énergie en toute simplicité</p>
+        </div>
+    </header>
+    
+    <!-- Intro -->
+    <div class="container">
+        <div class="intro">
+            <p>Et si votre maison consommait moins... sans changer votre façon de vivre ? Ce site vous présente, en toute simplicité, 4 types de travaux et d'aides qui reviennent le plus souvent pour allèger la facture d'énergie d'une maison comme la vôtre.</p>
+        </div>
+    </div>
+    
+    <!-- Section 4 idées -->
+    <div class="container">
+        <h2>4 idées pour alléger vos factures</h2>
+        
+        <p style="text-align: center; color: #666; margin-bottom: 40px;">Des travaux concrets, pensés pour des maisons habitées tous les jours, avec un accompagnement étape par étape pour rester serein du premier contact jusqu'à la fin du chantier.</p>
+        
+        <div class="ideas">
+            <!-- Isolation des combles -->
+            <div class="idea-card">
+                <h3>Isolation des combles</h3>
+                <div class="subtitle">Soulager le chauffage de la maison.</div>
+                <p>Une couche continue d'isolant (laine de roche ou équivalent) dans vos combles limite les déperditions et rend la maison plus agréable, sans courant d'air froid.</p>
+                <a href="#" class="btn">Voir comment on isole vos combles</a>
+            </div>
+            
+            <!-- Pompe à chaleur -->
+            <div class="idea-card">
+                <h3>Pompe à chaleur air/eau</h3>
+                <div class="subtitle">Remplacer une chaudière qui inquiète.</div>
+                <p>La pompe à chaleur prend le relais d'une chaudière gaz ou fioul et alimente vos radiateurs, avec une chaleur plus douce et une consommation mieux maîtrisée.</p>
+                <a href="#" class="btn">Découvrir la pompe à chaleur chez vous</a>
+            </div>
+            
+            <!-- Panneaux solaires -->
+            <div class="idea-card">
+                <h3>Panneaux solaires photovoltaïques</h3>
+                <div class="subtitle">Profiter du soleil pour votre maison.</div>
+                <p>Les panneaux photovoltaïques produisent une partie de votre électricité. Vous gardez le même confort, avec une facture d'électricité plus légère sur la durée.</p>
+                <a href="#" class="btn">Voir les projets solaires possibles</a>
+            </div>
+            
+            <!-- Ballon thermodynamique -->
+            <div class="idea-card">
+                <h3>Ballon d'eau chaude thermodynamique</h3>
+                <div class="subtitle">Alléger la partie « eau chaude ».</div>
+                <p>Le ballon thermodynamique utilise les calories de l'air pour chauffer l'eau, en consommant beaucoup moins qu'un cumulus classique.</p>
+                <a href="#" class="btn">Comprendre si ce ballon est adapté</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CTA -->
+    <div class="container">
+        <div class="cta">
+            <p>👉 Cliquez sur la solution qui vous parle le plus pour voir ce que cela peut changer, chez vous, sur vos factures.</p>
+        </div>
+    </div>
+    
+    <!-- Note -->
+    <div class="container">
+        <div class="tip">
+            <p><strong>*Chiffres et ordres de grandeur indicatifs,</strong> à adapter à chaque maison (état du logement, chauffage actuel, consommation, région, revenus, type de travaux). Un échange avec un éco-conseiller et l'usage des simulateurs officiels d'aides permettent d'affiner ce qui est possible chez vous.</p>
+        </div>
+    </div>
+    
+    <!-- Section étude gratuite -->
+    <div class="container">
+        <div class="study-section">
+            <h2>Étude gratuite de votre situation</h2>
+            <p>Pour une étude gratuite de votre maison et de vos factures, vous pouvez me contacter directement :</p>
+            
+            <div class="contact-info">
+                <p>📧 Email : <a href="mailto:samduboseas@gmail.com">samduboseas@gmail.com</a></p>
+                <p>📞 Téléphone : <a href="tel:+33771443175">07 71 44 31 75</a></p>
+            </div>
+            
+            <div class="tip">
+                <p>👉 <strong>Vous habitez dans les Bouches-du-Rhône ou à Pertuis (84)</strong> et vous voulez en parler ? Contactez-moi pour voir ce qui est possible dans votre maison.</p>
+            </div>
+            
+            <div class="tip">
+                <p>👉 En savoir ce que ces travaux ont donné chez d'autres particuliers : <a href="https://www.eauairsol-avis.com/avis-clients/" target="_blank" style="color: #1e3c72; font-weight: bold;">⭐ lire quelques avis clients contrôlés</a>.</p>
+            </div>
+            
+            <div class="tip">
+                <p>👉 Découvrir l'entreprise qui réalise les travaux : <a href="https://www.eau-air-sol.fr" target="_blank" style="color: #1e3c72; font-weight: bold;">🌍 site officiel Eau Air Sol</a>.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
     <footer>
-      <p>
-        👉 Vous habitez dans les Bouches-du-Rhône ou à Pertuis (84) et vous voulez en parler ?
-        Contactez-moi pour voir ce qui est possible dans votre maison.
-      </p>
-      <p>
-        👉 En savoir ce que ces travaux ont donné chez d'autres particuliers :
-        <a href="https://www.eauairsol-avis.com/avis-clients/" target="_blank" rel="noopener">
-          ⭐ lire quelques avis clients contrôlés
-        </a>.
-      </p>
-      <p>
-        👉 Découvrir l'entreprise qui réalise les travaux :
-        <a href="https://www.eau-air-sol.fr" target="_blank" rel="noopener">
-          🌍 site officiel Eau Air Sol
-        </a>.
-      </p>
-
-      <p>© Baisse Factures Maison – Informations et conseils sur la rénovation énergétique.</p>
+        <p>© Baisse Factures Maison – Informations et conseils sur la rénovation énergétique.</p>
     </footer>
-  </main>
-
-  <!-- Bouton Flottant WhatsApp -->
-  <a href="https://wa.me/33771443175?text=Bonjour%20Echo%20Conseils,%20je%20voudrais%20un%20diagnostic%20gratuit." 
-     style="position:fixed; width:60px; height:60px; bottom:40px; right:40px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:30px; box-shadow: 2px 2px 3px #999; z-index:100; display:flex; align-items:center; justify-content:center; text-decoration:none; line-height:60px;" 
-     target="_blank" 
-     title="Contactez-nous sur WhatsApp">
-     📱
-  </a>
-
+    
+    <!-- Bouton WhatsApp Flottant -->
+    <a href="https://wa.me/33771443175?text=Bonjour%20Echo%20Conseils,%20je%20voudrais%20un%20diagnostic%20gratuit." target="_blank" class="whatsapp-btn" title="Contactez-nous sur WhatsApp">
+        📱
+    </a>
 </body>
 </html>
