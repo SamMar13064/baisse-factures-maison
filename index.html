@@ -170,6 +170,55 @@
             border-radius: 4px;
         }
         
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .cta-button {
+            background: #16a34a;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05em;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button.phone {
+            background: #25d366;
+        }
+        
+        .cta-button.email {
+            background: #FF6B6B;
+        }
+        
+        .cta-button.facebook {
+            background: #1877F2;
+        }
+        
+        .facebook-section {
+            background: #f0f2f5;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+        
         footer {
             background: #333;
             color: white;
@@ -183,31 +232,6 @@
             font-size: 0.9em;
         }
         
-        /* Bouton WhatsApp */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: #25d366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            z-index: 9999;
-            transition: all 0.3s;
-        }
-        
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-        }
-        
-        /* Responsive */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8em;
@@ -222,10 +246,13 @@
                 gap: 20px;
             }
             
-            .whatsapp-btn {
-                width: 55px;
-                height: 55px;
-                font-size: 28px;
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-button {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
@@ -325,15 +352,43 @@
             </div>
         </div>
     </div>
+
+    <!-- Section CTA - Nous contacter -->
+    <div class="container">
+        <div style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 60px 20px; text-align: center; border-radius: 8px; margin: 60px 0;">
+            <h2 style="color: white; margin-bottom: 20px;">Prêt à réduire vos factures?</h2>
+            <p style="font-size: 1.1em; margin-bottom: 40px; opacity: 0.95;">Nous sommes là pour vous aider</p>
+            
+            <div class="cta-buttons">
+                <a href="tel:+33771443175" class="cta-button phone">
+                    📞 Appeler maintenant
+                </a>
+                <a href="mailto:samduboseas@gmail.com" class="cta-button email">
+                    📧 Nous écrire
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61585839789856" target="_blank" class="cta-button facebook">
+                    👍 Nous suivre
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Section Facebook -->
+    <div class="facebook-section">
+        <div class="container">
+            <h2 style="color: #1e3c72;">📱 Suivez-nous sur Facebook</h2>
+            <p style="color: #666; font-size: 1.05em; margin-bottom: 20px;">
+                Découvrez nos actualités, nos conseils et les témoignages de nos clients
+            </p>
+            <a href="https://www.facebook.com/profile.php?id=61585839789856" target="_blank" class="cta-button facebook">
+                👍 Aller à notre page Facebook
+            </a>
+        </div>
+    </div>
     
     <!-- Footer -->
     <footer>
         <p>© Baisse Factures Maison – Informations et conseils sur la rénovation énergétique.</p>
     </footer>
-    
-    <!-- Bouton WhatsApp Flottant -->
-    <a href="https://wa.me/33771443175?text=Bonjour%20Echo%20Conseils,%20je%20voudrais%20un%20diagnostic%20gratuit." target="_blank" class="whatsapp-btn" title="Contactez-nous sur WhatsApp">
-        📱
-    </a>
 </body>
 </html>
