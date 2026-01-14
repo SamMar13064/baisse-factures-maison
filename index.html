@@ -1,178 +1,21 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Baisse Factures Maison</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f5f5; color: #333; }
-    h1, h2, h3 { margin: 0; }
-    a { text-decoration: none; }
+<section class="section-cta">
+  <div class="container">
+    <h2>Prêt à réduire vos factures ?</h2>
+    <p>Nous sommes là pour vous aider.</p>
 
-    .hero { background: linear-gradient(135deg, #0046b8, #002b73); color: white; padding: 32px 16px 40px; text-align: center; }
-    .hero h1 { font-size: 32px; margin-bottom: 8px; }
-    .hero p { margin: 0; font-size: 16px; opacity: 0.9; }
+    <div class="cta-buttons">
+      <a class="btn btn-call" href="tel:0771443175">📞 Appeler maintenant</a>
+      <a class="btn btn-mail" href="mailto:samdubos@orange.fr">✉️ Nous écrire</a>
+      <a class="btn btn-follow" href="https://www.facebook.com/profile.php?id=61585839789856" target="_blank" rel="noopener">
+        ⭐ Nous suivre
+      </a>
+      <a class="btn btn-review" href="https://www.facebook.com/profile.php?id=61585839789856&sk=reviews&locale=fr_FR" target="_blank" rel="noopener">
+        ⭐ Laisser un avis sur Facebook
+      </a>
+    </div>
 
-    .section { max-width: 1100px; margin: 32px auto; padding: 0 16px; }
-    .section-title { text-align: center; margin-bottom: 24px; }
-    .section-title h2 { font-size: 24px; margin-bottom: 4px; }
-
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-    .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
-    .card h3 { color: #00853f; font-size: 18px; margin-bottom: 4px; }
-    .card h4 { color: #0046b8; font-size: 14px; margin-bottom: 12px; font-weight: 600; }
-    .card p { font-size: 14px; line-height: 1.5; margin-bottom: 16px; }
-
-    .btn { display: inline-block; padding: 10px 14px; border-radius: 999px; background: #00a53f; color: white; font-size: 14px; font-weight: 600; text-align: center; }
-    .btn:hover { background: #008a35; }
-
-    .bar { background: #ffb320; color: #1f2933; padding: 16px; text-align: center; font-size: 14px; }
-
-    .study { background: white; border-radius: 8px; padding: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.06); }
-    .study h2 { text-align: center; margin-bottom: 16px; }
-    .study p { font-size: 14px; margin-bottom: 16px; }
-    .study-box { border-left: 4px solid #fbbf24; background: #fffbea; padding: 10px 12px; margin-bottom: 10px; font-size: 13px; }
-
-    .cta { background: linear-gradient(135deg, #0046b8, #002b73); color: white; padding: 32px 16px 40px; text-align: center; margin-top: 32px; }
-    .cta h2 { font-size: 24px; margin-bottom: 8px; }
-    .cta p { margin-bottom: 20px; font-size: 14px; }
-    .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-    .cta-btn { padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 600; border: none; cursor: pointer; }
-    .cta-call { background: #00a53f; color: white; }
-    .cta-mail { background: #ff5b5b; color: white; }
-    .cta-follow { background: white; color: #0046b8; }
-
-    .footer { background: #111827; color: #9ca3af; padding: 16px; text-align: center; font-size: 12px; margin-top: 24px; }
-
-    @media (min-width: 768px) {
-      .hero h1 { font-size: 40px; }
-    }
-  </style>
-</head>
-<body>
-
-  <header class="hero">
-    <h1>Baisse Factures Maison</h1>
-    <p>Réduire votre facture d’énergie en toute simplicité</p>
-  </header>
-
-  <main>
-    <section class="section">
-      <div class="section-title">
-        <h2>4 idées pour alléger vos factures</h2>
-        <p>Des travaux concrets, adaptés aux maisons habitées tous les jours, avec un accompagnement de A à Z.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Isolation des combles</h3>
-          <h4>Soulager le chauffage de la maison.</h4>
-          <p>Une couche continue d’isolant dans vos combles limite les déperditions et rend la maison plus agréable, sans courant d’air froid.</p>
-          <a href="combles.html" class="btn">Voir comment on isole vos combles</a>
-        </article>
-
-        <article class="card">
-          <h3>Pompe à chaleur air/eau</h3>
-          <h4>Remplacer une chaudière qui inquiète.</h4>
-          <p>La pompe à chaleur prend le relais d’une chaudière gaz ou fioul et alimente vos radiateurs, avec une chaleur plus douce et une consommation mieux maîtrisée.</p>
-          <a href="pac.html" class="btn">Découvrir la pompe à chaleur chez vous</a>
-        </article>
-
-        <article class="card">
-          <h3>Panneaux solaires photovoltaïques</h3>
-          <h4>Profiter du soleil pour votre maison.</h4>
-          <p>Les panneaux produisent une partie de votre électricité, avec une facture plus légère sur la durée.</p>
-          <a href="pv.html" class="btn">Voir les projets solaires possibles</a>
-        </article>
-
-        <article class="card">
-          <h3>Ballon d’eau chaude thermodynamique</h3>
-          <h4>Alléger la partie « eau chaude ».</h4>
-          <p>Le ballon thermodynamique utilise les calories de l’air pour chauffer l’eau, en consommant beaucoup moins qu’un cumulus classique.</p>
-          <!-- BOUTON QUI MARCHE VERS ballon.html -->
-          <a href="ballon.html" class="btn">Comprendre si ce ballon est adapté</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="bar">
-      <strong>*Chiffres et ordres de grandeur indicatifs*</strong> à adapter à chaque maison et à votre situation.
-    </section>
-
-    <section class="section">
-      <div class="study">
-    <!-- Étude gratuite de votre situation -->
-    <section class="section-etude" id="contact">
-      <div class="container">
-        <h2>Étude gratuite de votre situation</h2>
-
-        <p>
-          Pour une étude gratuite de votre maison et de vos factures, vous pouvez me contacter directement :
-        </p>
-
-        <p>
-          📧 Email :
-          <a href="mailto:samduboseas@gmail.com">samduboseas@gmail.com</a><br>
-          📞 Téléphone :
-          <a href="tel:0771443175">07 71 44 31 75</a>
-        </p>
-
-        <div class="etude-points">
-          <p>
-            👉 Vous habitez dans les Bouches-du-Rhône ou à Pertuis (84) et voulez en parler ?
-            Contactez-moi pour voir ce qui est possible dans votre maison.
-          </p>
-          <p>
-  ⭐ En savoir plus sur les travaux réalisés chez d’autres particuliers :
-  <a href="https://www.eauairsol-avis.com/avis-clients/" target="_blank" rel="noopener">
-    lire quelques avis clients contrôlés
-  </a>.
-</p>
-<p>
-  🌍 Découvrir l’entreprise qui réalise les travaux :
-  <a href="https://www.eau-air-sol.fr/" target="_blank" rel="noopener">
-    site officiel Eau Air Sol
-  </a>.
-</p>
-
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bandeau d'appel à l'action -->
-    <section class="section-cta">
-      <div class="container">
-        <h2>Prêt à réduire vos factures ?</h2>
-        <p>Nous sommes là pour vous aider.</p>
-
-     <div class="cta-buttons">
-  <a class="btn btn-call" href="tel:0771443175">📞 Appeler maintenant</a>
- <a class="btn btn-mail" href="mailto:samdubos@orange.fr">✉️ Nous écrire</a>
-
-  <a class="btn btn-follow" href="https://www.facebook.com/profile.php?id=61585839789856" target="_blank" rel="noopener">
-    ⭐ Nous suivre
-  </a>
-  <a class="btn btn-review" href="https://www.facebook.com/profile.php?id=61585839789856&sk=reviews&locale=fr_FR" target="_blank" rel="noopener">
-    ⭐ Laisser un avis sur Facebook
-  </a>
-</div>
-          <p class="mentions">
-    Les informations envoyées par email sont utilisées uniquement pour étudier votre situation énergétique et vous recontacter à ce sujet. Elles ne sont jamais revendues. Vous pouvez demander l’accès, la rectification ou la suppression de vos données à l’adresse : samdubos@orange.fr.
-  </p>
-
+    <p class="mentions">
+      Les informations envoyées par email sont utilisées uniquement pour étudier votre situation énergétique et vous recontacter à ce sujet. Elles ne sont jamais revendues. Vous pouvez demander l’accès, la rectification ou la suppression de vos données à l’adresse : samdubos@orange.fr.
+    </p>
+  </div>
 </section>
-
-
-
-    </section>
-
-        
-
-
-
-
-
-
-
-
