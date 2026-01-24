@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,43 +6,154 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f5f5; color: #333; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
     h1, h2, h3 { margin: 0; }
     a { text-decoration: none; }
 
-    .hero { background: linear-gradient(135deg, #0046b8, #002b73); color: white; padding: 32px 16px 40px; text-align: center; }
-    .hero h1 { font-size: 32px; margin-bottom: 8px; }
-    .hero p { margin: 0; font-size: 16px; opacity: 0.9; }
+    .hero {
+      background: linear-gradient(135deg, #0046b8, #002b73);
+      color: white;
+      padding: 32px 16px 40px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    .hero p {
+      margin: 0;
+      font-size: 16px;
+      opacity: 0.9;
+    }
 
-    .section { max-width: 1100px; margin: 32px auto; padding: 0 16px; }
-    .section-title { text-align: center; margin-bottom: 24px; }
-    .section-title h2 { font-size: 24px; margin-bottom: 4px; }
+    .section {
+      max-width: 1100px;
+      margin: 32px auto;
+      padding: 0 16px;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .section-title h2 {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
 
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-    .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
-    .card h3 { color: #00853f; font-size: 18px; margin-bottom: 4px; }
-    .card h4 { color: #0046b8; font-size: 14px; margin-bottom: 12px; font-weight: 600; }
-    .card p { font-size: 14px; line-height: 1.5; margin-bottom: 16px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+    }
+    .card h3 {
+      color: #00853f;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    .card h4 {
+      color: #0046b8;
+      font-size: 14px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
 
-    .btn { display: inline-block; padding: 10px 14px; border-radius: 999px; background: #00a53f; color: white; font-size: 14px; font-weight: 600; text-align: center; }
-    .btn:hover { background: #008a35; }
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #00a53f;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .btn:hover {
+      background: #008a35;
+    }
 
-    .bar { background: #ffb320; color: #1f2933; padding: 16px; text-align: center; font-size: 14px; }
+    .bar {
+      background: #ffb320;
+      color: #1f2933;
+      padding: 16px;
+      text-align: center;
+      font-size: 14px;
+    }
 
-    .study { background: white; border-radius: 8px; padding: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.06); }
-    .study h2 { text-align: center; margin-bottom: 16px; }
-    .study p { font-size: 14px; margin-bottom: 16px; }
+    .study {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+    .study h2 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .study p {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
 
-    .cta { background: linear-gradient(135deg, #0046b8, #002b73); color: white; padding: 32px 16px 40px; text-align: center; margin-top: 32px; }
-    .cta h2 { font-size: 24px; margin-bottom: 8px; }
-    .cta p { margin-bottom: 20px; font-size: 14px; }
-    .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-    .cta-btn { padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 600; border: none; cursor: pointer; }
+    .cta {
+      background: linear-gradient(135deg, #0046b8, #002b73);
+      color: white;
+      padding: 32px 16px 40px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .cta h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .cta p {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    .cta-btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+    }
     .cta-call { background: #00a53f; color: white; }
     .cta-mail { background: #ff5b5b; color: white; }
     .cta-follow { background: white; color: #0046b8; }
 
-    .footer { background: #111827; color: #9ca3af; padding: 16px; text-align: center; font-size: 12px; margin-top: 24px; }
+    .footer {
+      background: #111827;
+      color: #9ca3af;
+      padding: 16px;
+      text-align: center;
+      font-size: 12px;
+      margin-top: 24px;
+    }
 
     @media (min-width: 768px) {
       .hero h1 { font-size: 40px; }
@@ -58,6 +168,7 @@
   </header>
 
   <main>
+    <!-- 4 cartes produits -->
     <section class="section">
       <div class="section-title">
         <h2>4 idées pour alléger vos factures</h2>
@@ -95,17 +206,17 @@
       </div>
     </section>
 
+    <!-- Bandeau chiffres indicatifs -->
     <section class="bar">
       <strong>*Chiffres et ordres de grandeur indicatifs*</strong> à adapter à chaque maison et à votre situation.
     </section>
 
+    <!-- Bloc étude gratuite -->
     <section class="section">
       <div class="study">
         <h2>Étude gratuite de votre situation</h2>
 
-        <p>
-          Pour une étude gratuite de votre maison et de vos factures, vous pouvez me contacter directement :
-        </p>
+        <p>Pour une étude gratuite de votre maison et de vos factures, vous pouvez me contacter directement :</p>
 
         <p>
           📧 Email :
@@ -133,6 +244,7 @@
       </div>
     </section>
 
+    <!-- CTA final -->
     <section class="cta">
       <h2>Prêt à réduire vos factures ?</h2>
       <p>Nous sommes là pour vous aider.</p>
@@ -153,197 +265,6 @@
   <footer class="footer">
     © Baisse Factures Maison – Eau Air Sol.
   </footer>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Réduire vos factures d’énergie – Eau Air Sol</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- En‑tête -->
-  <header class="header">
-    <div class="container">
-      <h1>Réduire vos factures d’énergie dans votre maison</h1>
-      <p>Pompe à chaleur, ballon thermodynamique, isolation des combles et panneaux photovoltaïques.</p>
-    </div>
-  </header>
-
-  <!-- Bandeau d’info -->
-  <section class="section-note">
-    <div class="container">
-      <p>
-        <strong>*Chiffres et ordres de grandeur indicatifs*</strong> à adapter à chaque maison et à votre situation.
-      </p>
-    </div>
-  </section>
-
-  <!-- 4 cartes travaux -->
-  <section class="section-cards">
-    <div class="container cards-grid">
-
-      <article class="card">
-        <h2>Isolation des combles</h2>
-        <p>Limiter les déperditions de chaleur par le toit pour réduire la facture de chauffage.</p>
-        <p><a class="btn" href="combles.html">Voir comment on isole vos combles</a></p>
-      </article>
-
-      <article class="card">
-        <h2>Pompe à chaleur air/eau</h2>
-        <p>Remplacer une ancienne chaudière gaz ou fioul par une PAC performante adaptée à votre maison.</p>
-        <p><a class="btn" href="pac.html">Découvrir la pompe à chaleur chez vous</a></p>
-      </article>
-
-      <article class="card">
-        <h2>Ballon thermodynamique</h2>
-        <p>Produire l’eau chaude sanitaire avec une pompe à chaleur dédiée, en économisant sur l’électricité.</p>
-        <p><a class="btn" href="ballon.html">Comprendre si ce ballon est adapté</a></p>
-      </article>
-
-      <article class="card">
-        <h2>Panneaux photovoltaïques</h2>
-        <p>Produire votre électricité et compenser une partie de votre consommation réseau.</p>
-        <p><a class="btn" href="pv.html">Voir les projets solaires possibles</a></p>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- Bloc contact principal -->
-  <section class="section-contact">
-    <div class="container">
-      <h2>Étude gratuite de votre situation</h2>
-      <p>
-        Pour une étude gratuite de votre maison et de vos factures, vous pouvez me contacter directement :
-      </p>
-      <p>
-        📧 Email :
-        <a href="mailto:samduboseas@gmail.com">samduboseas@gmail.com</a><br>
-        📞 Téléphone : 07 71 44 31 75
-      </p>
-      <p>
-        👉 Vous habitez dans les Bouches‑du‑Rhône ou à Pertuis (84) et voulez en parler ?
-        Contactez‑moi pour voir ce qui est possible dans votre maison.
-      </p>
-      <p>
-        ⭐ Pour en savoir plus sur les travaux réalisés chez d’autres particuliers :
-        <a href="https://www.facebook.com/profile.php?id=61585839789856" target="_blank" rel="noopener">
-          lire quelques avis clients contrôlés
-        </a>.
-      </p>
-      <p>
-        🌍 Découvrir l’entreprise qui réalise les travaux :
-        <a href="https://www.eauairsol.fr" target="_blank" rel="noopener">site officiel Eau Air Sol</a>.
-      </p>
-    </div>
-  </section>
-
-  <!-- Bandeau d’appel à l’action + RGPD -->
-  <section class="section-cta">
-    <div class="container">
-      <h2>Prêt à réduire vos factures ?</h2>
-      <p>Nous sommes là pour vous aider.</p>
-
-      <div class="cta-buttons">
-        <a class="btn btn-call" href="tel:0771443175">📞 Appeler maintenant</a>
-        <a class="btn btn-mail" href="mailto:samdubos@orange.fr">✉️ Nous écrire</a>
-        <a class="btn btn-follow" href="https://www.facebook.com/profile.php?id=61585839789856" target="_blank" rel="noopener">
-          ⭐ Nous suivre
-        </a>
-        <a class="btn btn-review" href="https://www.facebook.com/profile.php?id=61585839789856&sk=reviews&locale=fr_FR" target="_blank" rel="noopener">
-          ⭐ Laisser un avis sur Facebook
-        </a>
-      </div>
-
-      <p class="mentions">
-        Les informations envoyées par email sont utilisées uniquement pour étudier votre situation énergétique
-        et vous recontacter à ce sujet. Elles ne sont jamais revendues. Vous pouvez demander l’accès,
-        la rectification ou la suppression de vos données à l’adresse : samdubos@orange.fr.
-      </p>
-
-      <p>
-        <a href="mentions.html">Mentions légales &amp; politique de confidentialité</a>
-      </p>
-    </div>
-  </section>
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <title>Étude PAC Salon</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-    h1 {
-      color: #00b341;
-      font-size: 28px;
-    }
-    h2 {
-      color: #00b341;
-      font-size: 22px;
-    }
-    p {
-      margin-bottom: 1em;
-    }
-    a.button {
-      display: inline-block;
-      background: #00b341;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-    a.button:hover {
-      background: #009933;
-    }
-    .rgpd {
-      font-size: 0.85em;
-      margin-top: 1em;
-      line-height: 1.4;
-    }
-  </style>
-</head>
-<body>
-  <h1>Économies -60% factures</h1>
-  
-  <p><strong>Fioul 2358€ → Mitsubishi 999€</strong></p>
-
-  <h2>Étude gratuite de votre situation</h2>
-  
-  <p>Remplissez ce formulaire et je vous rappelle pour une étude gratuite de votre maison et de vos factures.</p>
-
-  <a href="mailto:samdubos@orange.fr,dubosam1@gmail.com?subject=Demande%20d%E2%80%99%C3%A9tude%20gratuite%20-%20Baisse%20Factures%20Maison&body=Bonjour%20Sam,%0D%0A%0D%0AJe%20souhaite%20une%20%C3%A9tude%20gratuite%20de%20ma%20situation.%0D%0A%0D%0ANom%20%3A%20%0D%0AEmail%20%3A%20%0D%0AT%C3%A9l%C3%A9phone%20%3A%20%0D%0ACode%20postal%20%3A%20%0D%0AMessage%20%3A%20%0D%0A%0D%0A%5BJ%E2%80%99accepte%20que%20mes%20donn%C3%A9es%20soient%20utilis%C3%A9es%20pour%20analyser%20ma%20situation%20%C3%A9nerg%C3%A9tique%20et%20%C3%AAtre%20recontact%C3%A9(e)%20%C3%A0%20ce%20sujet.%5D"
-     class="button">
-    Demander mon étude gratuite
-  </a>
-
-  <div class="rgpd">
-    Les informations recueillies via ce formulaire sont enregistrées par <strong>Echo Conseils en Économie d’Énergie</strong> afin de répondre à votre demande d’étude gratuite et, si vous l’acceptez, vous proposer des solutions pour réduire vos factures. Elles sont conservées pendant 3 ans maximum et sont destinées uniquement à Echo Conseils en Économie d’Énergie. Vous pouvez exercer vos droits d’accès, de rectification, d’opposition et de suppression des données vous concernant à l’adresse : <strong>samduboseas@gmail.com</strong>.
-  </div>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
